@@ -2,17 +2,19 @@ package com.company;
 
 public class DatabaseHandler {
 
-    private MySQLDatabase mySQLDatabase;
+    private Database database;
 
-    public DatabaseHandler () {
-        this.mySQLDatabase = new MySQLDatabase();
+    public DatabaseHandler (Database database) {
+        this.database = database;
     }
 
     public void connect () {
-        this.mySQLDatabase.connect();
+        this.database.connect();
     }
 
-    public void disconnect() {
-        this.mySQLDatabase.disconnect();
+    public void disconnect () {
+        this.database.disconnect();
     }
+
+
 }
